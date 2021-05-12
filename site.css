@@ -1,0 +1,23 @@
+body {
+  color: #ffffff;
+  font-family: 'Comfortaa', cursive;
+}
+
+.topnav {
+  background-color: #EAAC8B;
+  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px
+}
+
+.topnav a:hover {
+  color: #B56576;
+}
