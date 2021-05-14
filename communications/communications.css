@@ -4,4 +4,17 @@ body {
 
   h1 {
     font-family: 'Press Start 2P';
+
   }
+.content {
+  border-spacing: 15px;
+  padding: 14px 16px;
+  display: grid;
+}
+
+.container {
+  padding: 14px 16px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
