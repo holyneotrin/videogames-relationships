@@ -1,6 +1,8 @@
 body {
   color: #ffffff;
   font-family: 'Comfortaa', cursive;
+  background-image: linear-gradient(0deg, rgba(239,107,111,1) 0%, rgba(234,172,139,1) 100%);
+
 }
 
 .topnav {
@@ -13,6 +15,7 @@ body {
   float: left;
   color: #ffffff;
   text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
   font-size: 18px
 }
@@ -21,19 +24,9 @@ body {
   color: #B56576;
 }
 
-.active {
-  background-color: #f3d1be;
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: white;
-}
-
-.nav-item.active {
-    color: white;
-}
-
-.navbar-nav  .nav-link,
-.navbar-nav .nav-item:hover .nav-link {
-    color: #B56576;
+ img {
+   width: 75%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 }
