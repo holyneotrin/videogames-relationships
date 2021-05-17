@@ -18,3 +18,10 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
 }
+
+.csgolist {
+  background-color: #EAAC8B;
+  outline-style: solid;
+  outline-color: #EAAC8B;
+  outline-width: thick;
+}
