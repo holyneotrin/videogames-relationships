@@ -4,8 +4,6 @@ body {
 
   h1 {
     font-family: 'Press Start 2P';
-    text-align: center;
-
   }
 .content {
   border-spacing: 15px;
@@ -18,4 +16,8 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+}
+
+.centered {
+  text-align: center;
 }
