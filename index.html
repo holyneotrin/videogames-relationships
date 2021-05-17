@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="site.css"></link>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
   <div class="topnav">
@@ -44,40 +45,71 @@
     </nav>
   </div>
 <body>
-      <a href="https://holyneotrin.github.io/videogames-relationships/communication/communication.html">
+
+      <a href="communication/communication.html">
         <img alt="Communication-in-Games" class="mySlides" src="img/communication.jpg">
       </a>
-      <a href="https://holyneotrin.github.io/videogames-relationships/improving/improving.html">
+      <div class="text">Communication in Games</div>
+      <a href="improving/improving.html">
         <img alt="Improving-relationships" class="mySlides" src="img/thumbnail.jpg">
       </a>
-      <a href="https://holyneotrin.github.io/videogames-relationships/gamers/gamers.html">
+        <div class="text">Improving Relationships</div>
+      <a href="gamers/gamers.html">
         <img alt="Gamers-vs-nongamers" class="mySlides" src="img/horiz-gaming4.jpeg">
       </a>
-      <a href="https://holyneotrin.github.io/videogames-relationships/first/first.html">
+      <div class="text">Gamers vs Non-Gamers</div>
+      <a href="first/first.html">
         <img alt="Generational-Differences" class="mySlides" src="img/horiz-gaming3.jpeg">
       </a>
-  <button class="left-button" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="right-button" onclick="plusDivs(+1)">&#10095;</button>
+      <div class="text">Generational Differences</div>
+      <a href="why/why.html">
+        <img alt="Why-Do-We-Play-Competitive?" class="mySlides" src="img/whyimage.jpg">
+      </a>
+      <div class="text">Why Do We Play Competitive?</div>
+      <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      <br>
       <p>For this project, our entire group wanted to focus on games and how it can affect relationships. We've all had a game night that has gone horrendously wrong for numerous of reasons. Someone got too invested over a party game, the rules were explained poorly so no one played the game properly, or there was an inbalance between player strengths, causing the novice players to dominate the amateur players. We wanted to delve more into why this occurs and if there might be some correlation between games and relationships.</p>
 
-    <script>
-      var slideIndex = 1;
-      showDivs(slideIndex);
+      <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
-      }
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
 
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-        }
-        x[slideIndex-1].style.display = "block";
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
       }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
     </script>
+
 </body>
 </html>
