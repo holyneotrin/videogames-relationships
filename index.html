@@ -43,32 +43,32 @@
       </div>
     </nav>
   </div>
+<body>
+      <img class="mySlides" src="img/communication.jpg">
+      <img class="mySlides" src="img/thumbnail.jpg">
 
-    <img class="mySlides" src="img/thumbnail.jpg">
-    <img class="mySlides" src="img/communication.jpg">
-    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-    <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  <button class="left-button" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="right-button" onclick="plusDivs(+1)">&#10095;</button>
       <p>For this project, our entire group wanted to focus on games and how it can affect relationships. We've all had a game night that has gone horrendously wrong for numerous of reasons. Someone got too invested over a party game, the rules were explained poorly so no one played the game properly, or there was an inbalance between player strengths, causing the novice players to dominate the amateur players. We wanted to delve more into why this occurs and if there might be some correlation between games and relationships. </p>
 
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
 
-<script>
-  var slideIndex = 1;
-  showDivs(slideIndex);
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
 
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-}
-</script>
-
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+</body>
 </html>
